@@ -134,8 +134,8 @@ def predict(sample, interpreter, sensitivity):
         if p_sorted[i][0] in ['Human_Human', 'Non-bird_Non-bird', 'Noise_Noise']:
             p_sorted[i] = (p_sorted[i][0], 0.0)
 
-    # Only return first the top ten results
-    return p_sorted[:10]
+    # RETURN EVERY RESULT
+    return p_sorted
 
 def analyzeAudioData(chunks, lat, lon, week, sensitivity, overlap, interpreter):
 
